@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { Api } from './core/constants/api';
 import { TokenStorageService } from './core/auth/token-storage.service';
 
 @Component({
