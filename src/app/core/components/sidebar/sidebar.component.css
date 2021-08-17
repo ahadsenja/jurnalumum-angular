@@ -1,0 +1,9 @@
+.nav .nav-item a {
+ color: #ffffff;
+ font-size: 15px;
+}
+
+.nav .nav-item a:hover {
+ color: #4066D5;
+ cursor: pointer;
+}
