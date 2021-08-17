@@ -1,0 +1,15 @@
+#sidebar {
+ height: 100%;
+ padding-top: 80px;
+ position: fixed;
+ background-color: #111B34;
+}
+
+#dashboard {
+ margin-top: 80px;
+}
+
+#navbar {
+ background-color: #4066D5 !important;
+ box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
+}
