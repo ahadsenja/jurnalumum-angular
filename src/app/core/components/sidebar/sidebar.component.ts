@@ -1,4 +1,7 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+
+import { TokenStorageService } from '../../auth/token-storage.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private token: TokenStorageService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  doLogout() {
+    this.token.logout();
+    this.location.replaceState('/login')
+    window.location.reload();
   }
 
 }
