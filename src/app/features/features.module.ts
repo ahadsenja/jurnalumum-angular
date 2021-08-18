@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 
@@ -14,7 +15,9 @@ import { TransactionComponent } from './transaction/transaction.component';
   declarations: [DashboardComponent, LoginComponent, RegisterComponent, JurnalComponent, TransactionComponent],
   imports: [
     CommonModule,
-    FeaturesRoutingModule
+    FeaturesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     DashboardComponent,
