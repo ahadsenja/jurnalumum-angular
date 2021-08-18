@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Api } from 'src/app/core/constants/api';
-import { Jurnal } from 'src/app/core/models/jurnal';
+import { Jurnal } from 'src/app/shared/models/jurnal';
 import { JurnalService } from '../../services/jurnal.service';
 
 @Component({
