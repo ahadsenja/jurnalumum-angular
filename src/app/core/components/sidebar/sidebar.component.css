@@ -7,3 +7,9 @@
  color: #4066D5;
  cursor: pointer;
 }
+
+.nav .nav-item #logout {
+ position: absolute;
+ bottom: 0;
+ padding-bottom: 20px;
+}
