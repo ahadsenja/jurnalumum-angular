@@ -1,0 +1,12 @@
+.card {
+ background-color: rgb(35, 70, 168);
+ color: #ffffff;
+}
+
+.card #btn-create {
+ color: #ffffff;
+}
+
+.card #btn-create:hover {
+ color: #33beff;
+}
