@@ -6,8 +6,8 @@ import { AuthGuard } from './core/guard/auth.guard';
 import { LoginComponent } from './features/pages/login/login.component';
 import { RegisterComponent } from './features/pages/register/register.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
-import { JurnalComponent } from './features/jurnal/jurnal.component';
-import { TransactionComponent } from './features/transaction/transaction.component';
+import { JurnalComponent } from './features/jurnal/jurnal-list/jurnal.component';
+import { TransactionComponent } from './features/transaction/transaction-list/transaction.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
