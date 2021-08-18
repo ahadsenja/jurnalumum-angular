@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators'
 
 import { Api } from '../constants/api';
 import { TokenStorageService } from '../auth/token-storage.service';
-import { User } from 'src/app/shared/models/user';
 
 @Injectable({
   providedIn: 'root'
