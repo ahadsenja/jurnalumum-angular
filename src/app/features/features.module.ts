@@ -7,8 +7,8 @@ import { FeaturesRoutingModule } from './features-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { JurnalComponent } from './jurnal/jurnal.component';
-import { TransactionComponent } from './transaction/transaction.component';
+import { JurnalComponent } from './jurnal/jurnal-list/jurnal.component';
+import { TransactionComponent } from './transaction/transaction-list/transaction.component';
 
 
 @NgModule({
