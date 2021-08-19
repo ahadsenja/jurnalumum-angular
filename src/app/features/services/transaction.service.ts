@@ -16,4 +16,8 @@ export class TransactionService {
   getAll(): Observable<any> {
     return this.http.get<Transaction[]>(Api.TRANSACTION_URL);
   }
+
+  create(transaction: Transaction): Observable<Transaction> {
+    return this.http.post<Transaction>(Api.TRANSACTION_URL, transaction);
+  }
 }
