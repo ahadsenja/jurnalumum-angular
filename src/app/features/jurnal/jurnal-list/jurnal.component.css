@@ -1,11 +1,15 @@
 .data-jurnal {
  background-color: #ffffff;
  padding: 20px;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
 }
 
 .card {
  background-color: #ffffff;
  color: #3F4853;
+ margin-right: 18px;
 }
 
 .card #btn-create {
