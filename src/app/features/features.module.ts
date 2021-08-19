@@ -10,10 +10,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { JurnalComponent } from './jurnal/jurnal-list/jurnal.component';
 import { TransactionComponent } from './transaction/transaction-list/transaction.component';
+import { JurnalCreateComponent } from './jurnal/jurnal-create/jurnal-create.component';
+import { TransactionCreateComponent } from './transaction/transaction-create/transaction-create.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, LoginComponent, RegisterComponent, JurnalComponent, TransactionComponent],
+  declarations: [DashboardComponent, LoginComponent, RegisterComponent, JurnalComponent, TransactionComponent, JurnalCreateComponent, TransactionCreateComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
