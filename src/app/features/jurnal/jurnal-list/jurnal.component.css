@@ -1,12 +1,17 @@
+.data-jurnal {
+ background-color: #ffffff;
+ padding: 20px;
+}
+
 .card {
- background-color: rgb(35, 70, 168);
- color: #ffffff;
+ background-color: #ffffff;
+ color: #3F4853;
 }
 
 .card #btn-create {
- color: #ffffff;
+ color: #25adc2;
 }
 
 .card #btn-create:hover {
- color: #33beff;
+ color: #3AC5D9;
 }
