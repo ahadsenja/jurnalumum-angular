@@ -2,7 +2,7 @@
  height: 100%;
  padding-top: 80px;
  position: fixed;
- background-color: #111B34;
+ background-color: #3F4853;
 }
 
 #dashboard {
@@ -10,6 +10,10 @@
 }
 
 #navbar {
- background-color: #4066D5 !important;
+ background-color: #3AC5D9 !important;
  box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
+}
+
+#main-content {
+ background-color: #DADDE4;
 }
