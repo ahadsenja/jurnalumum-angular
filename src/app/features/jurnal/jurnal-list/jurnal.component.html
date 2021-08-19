@@ -1,10 +1,12 @@
-<div class="card w-25">
- <div class="card-body" *ngFor="let jurnal of jurnals">
-  <h5 class="card-title">#{{ jurnal.id }}</h5>
-  <h5 class="card-title">{{ jurnal.name }}</h5>
-  <p class="card-text">{{ jurnal.description }}</p>
-
-  <a href="#" id="btn-create">Mulai Buat</a>
+<div class="data-jurnal">
+ <div class="card w-25">
+  <div class="card-body" *ngFor="let jurnal of jurnals">
+   <h5 class="card-title">#{{ jurnal.id }}</h5>
+   <h5 class="card-title">{{ jurnal.name }}</h5>
+   <p class="card-text">{{ jurnal.description }}</p>
+ 
+   <a href="#" id="btn-create">Mulai Buat</a>
+  </div>
  </div>
 </div>
  
