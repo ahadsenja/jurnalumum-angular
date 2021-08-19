@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 
@@ -16,6 +17,7 @@ import { TransactionComponent } from './transaction/transaction-list/transaction
   imports: [
     CommonModule,
     FeaturesRoutingModule,
+    FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule
   ],
