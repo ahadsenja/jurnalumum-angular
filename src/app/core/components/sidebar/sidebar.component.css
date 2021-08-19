@@ -4,12 +4,23 @@
 }
 
 .nav .nav-item a:hover {
- color: #a2d5ff;
  cursor: pointer;
 }
 
 .nav .nav-item #logout {
  position: absolute;
  bottom: 0;
- padding-bottom: 20px;
+ margin-bottom: 20px;
+ width: 125px;
+}
+
+.nav .nav-item #navitem-bg:hover {
+ background-color: #262E38;
+ border-radius: 0 100px 100px 0;
+}
+
+.nav #navitem-bg #logout:hover {
+ color: #3AC5D9;
+ background-color: #262E38;
+ border-radius: 0 100px 100px 0;
 }
