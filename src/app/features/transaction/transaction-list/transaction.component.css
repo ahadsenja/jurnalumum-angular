@@ -1,0 +1,17 @@
+.data-table {
+ background-color: #ffffff;
+ padding: 20px;
+}
+
+.data-table .ontop-table {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-bottom: 10px;
+}
+
+.data-table .ontop-table input {
+ width: 200px;
+ border-radius: 50px;
+ margin-right: 10px;
+}
