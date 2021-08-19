@@ -17,4 +17,8 @@ export class JurnalService {
     headers.append('Content-Type', 'application/json');
     return this.http.get<Jurnal[]>(Api.JURNAL_URL, {headers: headers});
   }
+
+  create(jurnal: Jurnal): Observable<Jurnal> {
+    return this.http.post<Jurnal>(Api.JURNAL_URL, jurnal);
+  }
 }
