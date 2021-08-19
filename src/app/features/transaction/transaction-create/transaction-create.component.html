@@ -1,1 +1,30 @@
-<p>transaction-create works!</p>
+<div class="form-create">
+ <h5><strong>Create yor transaction for Jurnal Umum here</strong></h5>
+
+ <form [formGroup]="transactionCreateFG" (ngSubmit)="onCreateTransaction()">
+  <div class="form-group">
+   <label for="date">Date</label>
+   <input type="date" class="form-control" formControlName="date">
+  </div>
+
+  <div class="form-group">
+   <label for="description">Description</label>
+   <input type="text" class="form-control" formControlName="description" placeholder="Description">
+  </div>
+
+  <div class="form-group">
+   <label for="debit">Debit</label>
+   <input type="text" class="form-control" formControlName="debit" placeholder="Number">
+  </div>
+
+  <div class="form-group">
+   <label for="credit">Credit</label>
+   <input type="text" class="form-control" formControlName="credit" placeholder="Number">
+  </div>
+
+  <div class="btn-action">
+   <button type="submit" class="btn btn-success">Submit</button>
+   <button type="submit" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+  </div>
+ </form>
+</div>
