@@ -1,0 +1,16 @@
+.form-create {
+ background-color: #ffffff;
+ padding: 20px;
+}
+
+form .form-group {
+ margin-top: 20px;
+}
+
+.form-create .btn-action {
+ margin-top: 20px;
+}
+
+.form-create .btn-action .btn {
+ margin-right: 10px;
+}
