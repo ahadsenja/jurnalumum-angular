@@ -8,14 +8,21 @@ import { RegisterComponent } from './features/pages/register/register.component'
 import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { JurnalComponent } from './features/jurnal/jurnal-list/jurnal.component';
 import { TransactionComponent } from './features/transaction/transaction-list/transaction.component';
+import { JurnalCreateComponent } from './features/jurnal/jurnal-create/jurnal-create.component';
+import { TransactionCreateComponent } from './features/transaction/transaction-create/transaction-create.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'jurnal', component: JurnalComponent, canActivate: [AuthGuard] },
-  { path: 'transaction', component: TransactionComponent, canActivate: [AuthGuard] },
+
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+
+  { path: 'jurnal', component: JurnalComponent, canActivate: [AuthGuard] },
+  { path: 'jurnal/create', component: JurnalCreateComponent, canActivate: [AuthGuard] },
+
+  { path: 'transaction', component: TransactionComponent, canActivate: [AuthGuard] },
+  { path: 'transaction/create', component: TransactionCreateComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
