@@ -1,1 +1,45 @@
-<p>transaction works!</p>
+<div class="data-table">
+ <div class="ontop-table">
+  <a href="" class="btn btn-success btn-sm">
+   <fa-icon [icon]="plus"></fa-icon> Transaction
+  </a>
+
+  <div style="display: flex; align-items: center; justify-content: space-around;">
+   <input type="text" class="form-control form-control-sm"> <fa-icon [icon]="search"></fa-icon>
+  </div>
+ </div>
+
+ <table class="table table-hover">
+  <thead>
+   <tr>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Debit</th>
+    <th>Credit</th>
+    <th>Balance</th>
+    <th>Action</th>
+   </tr>
+  </thead>
+
+  <tbody>
+   <tr *ngFor="let ts of transactions">
+    <td>{{ ts.id }}</td>
+    <td>{{ ts.date }}</td>
+    <td>{{ ts.description }}</td>
+    <td>{{ ts.debit }}</td>
+    <td>{{ ts.credit }}</td>
+    <td>Balance</td>
+    <td>
+     <a href="#" class="btn btn-warning btn-sm">
+      <fa-icon [icon]="pen"></fa-icon>
+     </a>
+     <span style="padding-right: 5px;"></span>
+     <a href="#" class="btn btn-danger btn-sm">
+      <fa-icon [icon]="trash"></fa-icon>
+     </a>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>
