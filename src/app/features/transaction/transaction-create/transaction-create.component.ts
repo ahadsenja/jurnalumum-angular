@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -13,45 +12,44 @@ import { TransactionService } from '../../services/transaction.service';
 })
 export class TransactionCreateComponent implements OnInit {
 
-  transactionCreateFG = new FormGroup({})
-
-  transactions: Transaction[] = [];
-
+  formValueGroup = new FormGroup({})
   isSubmitted = false;
 
+  transactions: Transaction[] = [];
+  transactionObj : Transaction = new Transaction();
+  
   constructor(
     private formBuilder: FormBuilder,
-    private location: Location,
     private router: Router,
     private transactionService: TransactionService
   ) { }
 
   ngOnInit(): void {
-    this.transactionCreateFG = this.formBuilder.group({
+    this.formValueGroup = this.formBuilder.group({
       date: [''],
       description: [''],
-      debit: [''],
-      credit: [''],
-    })
+      debit: [0],
+      credit: [0],
+    });
   }
 
   onCreateTransaction() {
-    let formData: any = new FormData();
+    this.transactionObj.date = this.formValueGroup.value.date;
+    this.transactionObj.description = this.formValueGroup.value.description;
+    this.transactionObj.debit = this.formValueGroup.value.debit;
+    this.transactionObj.credit = this.formValueGroup.value.credit;
 
-    formData.append('date', this.transactionCreateFG.get('date')?.value);
-    formData.append('description', this.transactionCreateFG.get('description')?.value);
-    formData.append('debit', this.transactionCreateFG.get('debit')?.value);
-    formData.append('credit', this.transactionCreateFG.get('credit')?.value);
-
-    this.transactionService.create(formData).subscribe(res => {
+    this.transactionService.create(this.transactionObj).subscribe(res => {
       console.log(res);
       this.isSubmitted = true;
     })
+    this.formValueGroup.reset();
 
-    this.location.replaceState('/transaction');
+    this.router.navigate(['/transaction']);
   }
 
   onCancel() {
+    this.formValueGroup.reset();
     this.router.navigate(['/transaction']);
   }
 
