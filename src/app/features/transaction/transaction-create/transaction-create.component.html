@@ -1,7 +1,7 @@
 <div class="form-create">
  <h5><strong>Create yor transaction for Jurnal Umum here</strong></h5>
 
- <form [formGroup]="transactionCreateFG" (ngSubmit)="onCreateTransaction()">
+ <form [formGroup]="formValueGroup" (ngSubmit)="onCreateTransaction()">
   <div class="form-group">
    <label for="date">Date</label>
    <input type="date" class="form-control" formControlName="date">
