@@ -1,6 +1,5 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { TokenStorageService } from 'src/app/core/auth/token-storage.service';
 
 import { AuthService } from 'src/app/core/services/auth.service';
@@ -18,6 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   isLoggedIn = false;
+  userInfo: string[] = [];
 
   constructor(
     private authService: AuthService,
@@ -26,6 +26,9 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (this.token.getToken() !== null) {
+      this.isLoggedIn = true;
+    }
   }
 
   onSubmit() {
@@ -34,7 +37,8 @@ export class LoginComponent implements OnInit {
     if (email !== '' && password !== '') {
       this.authService.login(email, password).subscribe(data => {
         this.isLoggedIn = true;
-        this.token.saveUser(data);
+        this.token.saveToken(data.access_token);
+        console.log(data)
         this.location.replaceState('/');
         window.location.reload();
       })
