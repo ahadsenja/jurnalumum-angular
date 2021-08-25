@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -13,7 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [NavbarComponent, SidebarComponent, FooterComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
 
   exports: [
