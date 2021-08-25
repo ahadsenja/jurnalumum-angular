@@ -1,25 +1,33 @@
 <ul class="nav nav-pills flex-column">
  <li class="nav-item">
   <div id="navitem-bg">
-   <a class="nav-link" href="/dashboard" routerLink="dashboard">Dashboard</a>
+   <a class="nav-link" href="/dashboard" routerLink="dashboard">
+    <fa-icon [icon]="tachometer"></fa-icon> Dashboard
+   </a>
   </div>
  </li>
 
  <li class="nav-item">
   <div id="navitem-bg">
-   <a class="nav-link" href="/jurnal" routerLink="jurnal">Jurnal</a>
+   <a class="nav-link" href="/jurnal" routerLink="jurnal">
+    <fa-icon [icon]="bookopen"></fa-icon> Jurnal
+   </a>
   </div>
  </li>
 
  <li class="nav-item">
   <div id="navitem-bg">
-   <a class="nav-link" href="/transaction" routerLink="transaction">Transaction</a>
+   <a class="nav-link" href="/transaction" routerLink="transaction">
+    <fa-icon [icon]="wallet"></fa-icon> Transaction
+   </a>
   </div>
  </li>
 
  <li class="nav-item">
   <div id="navitem-bg">
-   <a class="nav-link" href="" id="logout" (click)="doLogout()">Logout</a>
+   <a class="nav-link" href="" id="logout" (click)="doLogout()">
+    <fa-icon [icon]="poweroff"></fa-icon> Logout
+   </a>
   </div>
  </li>
 </ul>
