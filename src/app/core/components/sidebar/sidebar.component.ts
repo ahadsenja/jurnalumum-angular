@@ -1,7 +1,14 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-import { TokenStorageService } from '../../auth/token-storage.service';
+import { 
+  faTachometerAlt, 
+  faBookOpen, 
+  faWallet, 
+  faPowerOff 
+} from '@fortawesome/free-solid-svg-icons';
+
+import { TokenStorageService } from '../../../core/auth/token-storage.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,6 +16,11 @@ import { TokenStorageService } from '../../auth/token-storage.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+
+  tachometer = faTachometerAlt;
+  bookopen = faBookOpen;
+  wallet = faWallet;
+  poweroff = faPowerOff;
 
   constructor(
     private token: TokenStorageService,
