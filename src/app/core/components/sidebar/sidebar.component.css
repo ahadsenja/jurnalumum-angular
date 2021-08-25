@@ -24,3 +24,7 @@
  background-color: #262E38;
  border-radius: 0 100px 100px 0;
 }
+
+.nav .nav-item fa-icon {
+ padding-right: 8px;
+}
