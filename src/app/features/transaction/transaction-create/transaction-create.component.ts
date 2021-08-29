@@ -44,7 +44,6 @@ export class TransactionCreateComponent implements OnInit {
       this.isSubmitted = true;
     })
     this.formValueGroup.reset();
-
     this.router.navigate(['/transaction']);
   }
 
