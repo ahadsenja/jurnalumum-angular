@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-transaction-update',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionUpdateComponent implements OnInit {
 
-  constructor() { }
+  formValueGroup = new FormGroup({});
+  isSubmitted = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onUpdateTransaction() {
+    
+  }
+
+  onCancel() {
+    this.formValueGroup.reset();
+    this.router.navigate(['/transaction'])
   }
 
 }
