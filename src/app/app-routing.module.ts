@@ -5,11 +5,16 @@ import { AuthGuard } from './core/guard/auth.guard';
 
 import { LoginComponent } from './features/pages/login/login.component';
 import { RegisterComponent } from './features/pages/register/register.component';
+
 import { DashboardComponent } from './features/dashboard/dashboard.component';
+
 import { JurnalComponent } from './features/jurnal/jurnal-list/jurnal.component';
-import { TransactionComponent } from './features/transaction/transaction-list/transaction.component';
 import { JurnalCreateComponent } from './features/jurnal/jurnal-create/jurnal-create.component';
+
+import { TransactionComponent } from './features/transaction/transaction-list/transaction.component';
 import { TransactionCreateComponent } from './features/transaction/transaction-create/transaction-create.component';
+import { TransactionUpdateComponent } from './features/transaction/transaction-update/transaction-update.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -23,6 +28,7 @@ const routes: Routes = [
 
   { path: 'transaction', component: TransactionComponent, canActivate: [AuthGuard] },
   { path: 'transaction/create', component: TransactionCreateComponent, canActivate: [AuthGuard] },
+  { path: 'transaction/edit/:id', component: TransactionUpdateComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
