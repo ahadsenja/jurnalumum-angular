@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 
@@ -22,7 +23,8 @@ import { TransactionUpdateComponent } from './transaction/transaction-update/tra
     FeaturesRoutingModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   exports: [
     DashboardComponent,
