@@ -5,7 +5,14 @@
   </a>
 
   <div style="display: flex; align-items: center; justify-content: space-around;">
-   <input type="text" class="form-control form-control-sm" placeholder="Search"> <fa-icon [icon]="search"></fa-icon>
+   <input 
+    class="form-control form-control-sm" 
+    type="search" 
+    name="search"
+    placeholder="Search" 
+    autocomplete="off" 
+    [(ngModel)]="searchText"
+   > <fa-icon [icon]="search"></fa-icon>
   </div>
  </div>
 
@@ -23,7 +30,7 @@
   </thead>
 
   <tbody>
-   <tr *ngFor="let trs of transactions">
+   <tr *ngFor="let trs of transactions | filter: searchText">
     <td>{{ trs.id }}</td>
     <td>{{ trs.date }}</td>
     <td>{{ trs.description }}</td>
