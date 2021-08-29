@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -13,8 +13,6 @@ export class JurnalService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-    return this.http.get<Jurnal[]>(Api.JURNAL_URL, {headers: headers});
+    return this.http.get<Jurnal[]>(Api.JURNAL_URL);
   }
 }
