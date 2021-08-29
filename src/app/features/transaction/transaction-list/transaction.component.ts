@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { 
   faTrashAlt, 
@@ -27,7 +28,10 @@ export class TransactionComponent implements OnInit {
 
   balance = 0;
 
-  constructor(private tsService: TransactionService) { }
+  constructor(
+    private tsService: TransactionService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.onGetTransactions();
@@ -45,6 +49,10 @@ export class TransactionComponent implements OnInit {
         this.transactions[i].balance = this.balance;
       }
     })
+  }
+
+  onSelectedTransaction(id: number) {
+    this.router.navigate(['/transaction/edit', id]);
   }
 
 }
