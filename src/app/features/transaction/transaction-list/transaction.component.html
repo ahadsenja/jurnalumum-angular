@@ -23,19 +23,19 @@
   </thead>
 
   <tbody>
-   <tr *ngFor="let ts of transactions">
-    <td>{{ ts.id }}</td>
-    <td>{{ ts.date }}</td>
-    <td>{{ ts.description }}</td>
-    <td>{{ ts.debit | number }}</td>
-    <td>{{ ts.credit | number}}</td>
-    <td>{{ ts.balance | number }}</td>
+   <tr *ngFor="let trs of transactions">
+    <td>{{ trs.id }}</td>
+    <td>{{ trs.date }}</td>
+    <td>{{ trs.description }}</td>
+    <td>{{ trs.debit | number }}</td>
+    <td>{{ trs.credit | number}}</td>
+    <td>{{ trs.balance | number }}</td>
     <td>
-     <a class="btn btn-warning btn-sm" (click)="onSelectedTransaction(ts.id)">
+     <a class="btn btn-warning btn-sm" (click)="onSelectedTransaction(trs.id)">
       <fa-icon [icon]="pen"></fa-icon>
      </a>
      <span style="padding-right: 5px;"></span>
-     <a href="#" class="btn btn-danger btn-sm">
+     <a class="btn btn-danger btn-sm" (click)="onDeleteTransaction(trs)">
       <fa-icon [icon]="trash"></fa-icon>
      </a>
     </td>
