@@ -31,7 +31,7 @@
     <td>{{ ts.credit | number}}</td>
     <td>{{ ts.balance | number }}</td>
     <td>
-     <a href="#" class="btn btn-warning btn-sm">
+     <a class="btn btn-warning btn-sm" (click)="onSelectedTransaction(ts.id)">
       <fa-icon [icon]="pen"></fa-icon>
      </a>
      <span style="padding-right: 5px;"></span>
