@@ -24,7 +24,6 @@ export class TransactionComponent implements OnInit {
   plus = faPlus;
 
   transactions: Transaction[] = [];
-  tr: Transaction[] = [];
 
   balance = 0;
 
@@ -48,6 +47,14 @@ export class TransactionComponent implements OnInit {
         this.balance = (this.balance + (debit - credit));
         this.transactions[i].balance = this.balance;
       }
+    })
+  }
+
+  onDeleteTransaction(transaction: Transaction) {
+    this.tsService.delete(transaction).subscribe(res => {
+      this.transactions = this.transactions.filter(id => id !== transaction);
+      alert(`Data With ID '${transaction.id}' Successfully Deleted!`);
+      window.location.reload();
     })
   }
 
