@@ -5,7 +5,7 @@
   </a>
 
   <div style="display: flex; align-items: center; justify-content: space-around;">
-   <input type="text" class="form-control form-control-sm"> <fa-icon [icon]="search"></fa-icon>
+   <input type="text" class="form-control form-control-sm" placeholder="Search"> <fa-icon [icon]="search"></fa-icon>
   </div>
  </div>
 
@@ -15,9 +15,9 @@
     <th>ID</th>
     <th>Date</th>
     <th>Description</th>
-    <th>Debit</th>
-    <th>Credit</th>
-    <th>Balance</th>
+    <th>Debit (Rp)</th>
+    <th>Credit (Rp)</th>
+    <th>Balance (Rp)</th>
     <th>Action</th>
    </tr>
   </thead>
@@ -27,9 +27,9 @@
     <td>{{ ts.id }}</td>
     <td>{{ ts.date }}</td>
     <td>{{ ts.description }}</td>
-    <td>{{ ts.debit }}</td>
-    <td>{{ ts.credit }}</td>
-    <td>Balance</td>
+    <td>{{ ts.debit | number }}</td>
+    <td>{{ ts.credit | number}}</td>
+    <td>{{ ts.balance | number }}</td>
     <td>
      <a href="#" class="btn btn-warning btn-sm">
       <fa-icon [icon]="pen"></fa-icon>
