@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { faTrashAlt, faPenAlt, faSearch, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faTrashAlt, 
+  faPenAlt, 
+  faSearch, 
+  faPlus 
+} from '@fortawesome/free-solid-svg-icons';
 
 import { Transaction } from 'src/app/shared/models/transaction';
 import { TransactionService } from '../../services/transaction.service';
@@ -18,6 +23,9 @@ export class TransactionComponent implements OnInit {
   plus = faPlus;
 
   transactions: Transaction[] = [];
+  tr: Transaction[] = [];
+
+  balance = 0;
 
   constructor(private tsService: TransactionService) { }
 
@@ -28,7 +36,14 @@ export class TransactionComponent implements OnInit {
   onGetTransactions() {
     this.tsService.getAll().subscribe(transactions => {
       this.transactions = transactions;
-      console.log(transactions);
+
+      for (let i=0; i < transactions.length; i++) {
+        let debit = transactions[i].debit;
+        let credit = transactions[i].credit;     
+
+        this.balance = (this.balance + (debit - credit));
+        this.transactions[i].balance = this.balance;
+      }
     })
   }
 
