@@ -26,6 +26,7 @@ export class TransactionComponent implements OnInit {
   transactions: Transaction[] = [];
 
   searchText = '';
+  p: number = 1;
   balance = 0;
 
   constructor(
