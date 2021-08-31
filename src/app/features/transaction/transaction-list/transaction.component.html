@@ -30,7 +30,7 @@
   </thead>
 
   <tbody>
-   <tr *ngFor="let trs of transactions | filter: searchText | paginate: {itemsPerPage: 5, currentPage: p} | orderBy: key: reverse">
+   <tr *ngFor="let trs of transactions | filter: searchText | paginate: {itemsPerPage: 10, currentPage: p} | orderBy: key: reverse">
     <td>{{ trs.id }}</td>
     <td>{{ trs.date }}</td>
     <td>{{ trs.description }}</td>
