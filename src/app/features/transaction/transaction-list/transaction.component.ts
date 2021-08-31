@@ -5,7 +5,8 @@ import {
   faTrashAlt, 
   faPenAlt, 
   faSearch, 
-  faPlus 
+  faPlus,
+  faSort 
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Transaction } from 'src/app/shared/models/transaction';
@@ -22,11 +23,14 @@ export class TransactionComponent implements OnInit {
   trash = faTrashAlt;
   search = faSearch;
   plus = faPlus;
+  sort = faSort;
 
   transactions: Transaction[] = [];
 
   searchText = '';
   p: number = 1;
+  key: string = 'id';
+  reverse: boolean = false;
   balance = 0;
 
   constructor(
@@ -62,6 +66,11 @@ export class TransactionComponent implements OnInit {
 
   onSelectedTransaction(id: number) {
     this.router.navigate(['/transaction/edit', id]);
+  }
+
+  onSorting(key: string) {
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 
 }
