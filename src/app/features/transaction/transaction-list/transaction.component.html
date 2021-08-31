@@ -19,7 +19,7 @@
  <table class="table table-hover">
   <thead>
    <tr>
-    <th (click)="onSorting('id')">ID&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
+    <th style="width: 48px" (click)="onSorting('id')">ID&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
     <th (click)="onSorting('date')">Date&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
     <th (click)="onSorting('description')">Description&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
     <th (click)="onSorting('debit')">Debit (Rp)&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
@@ -48,7 +48,7 @@
     </td>
    </tr>
   </tbody>
-
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
  </table>
+
+ <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
