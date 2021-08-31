@@ -19,18 +19,18 @@
  <table class="table table-hover">
   <thead>
    <tr>
-    <th>ID</th>
-    <th>Date</th>
-    <th>Description</th>
-    <th>Debit (Rp)</th>
-    <th>Credit (Rp)</th>
-    <th>Balance (Rp)</th>
+    <th (click)="onSorting('id')">ID&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
+    <th (click)="onSorting('date')">Date&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
+    <th (click)="onSorting('description')">Description&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
+    <th (click)="onSorting('debit')">Debit (Rp)&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
+    <th (click)="onSorting('credit')">Credit (Rp)&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
+    <th (click)="onSorting('balance')">Balance (Rp)&nbsp;<fa-icon [icon]="sort"></fa-icon></th>
     <th>Action</th>
    </tr>
   </thead>
 
   <tbody>
-   <tr *ngFor="let trs of transactions | filter: searchText | paginate: {itemsPerPage: 5, currentPage: p}">
+   <tr *ngFor="let trs of transactions | filter: searchText | paginate: {itemsPerPage: 5, currentPage: p} | orderBy: key: reverse">
     <td>{{ trs.id }}</td>
     <td>{{ trs.date }}</td>
     <td>{{ trs.description }}</td>
