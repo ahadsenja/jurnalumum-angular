@@ -30,7 +30,7 @@
   </thead>
 
   <tbody>
-   <tr *ngFor="let trs of transactions | filter: searchText">
+   <tr *ngFor="let trs of transactions | filter: searchText | paginate: {itemsPerPage: 5, currentPage: p}">
     <td>{{ trs.id }}</td>
     <td>{{ trs.date }}</td>
     <td>{{ trs.description }}</td>
@@ -48,5 +48,7 @@
     </td>
    </tr>
   </tbody>
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
  </table>
 </div>
