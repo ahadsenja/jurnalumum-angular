@@ -40,3 +40,7 @@ This app is still under development and maintenance, and will be updated as soon
   - Fontawesome
   - Json Server
   - Json Web Token
+
+### Screenshots
+
+<img src="./src/assets/github_assets/Dashboard.png">
