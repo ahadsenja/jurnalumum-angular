@@ -1,9 +1,14 @@
-# Jurnal Umum Apps ``V0.1``
+# Jurnal Umum Apps 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+
 Jurnal Umum Apps is a simple application that can be used for record your transaction. In this app, you just can create transaction for cash in and cash out, and to know the history of your transaction like date, debit, credit and balance. 
 
 This app is still under development and maintenance, and will be updated as soon as possibele. But if you want to try this app or use for learning needs, you can clone this project and install the all requirements, and the app can running well at your machine.
+
+ * App information:
+    - Name: `Jurnal Umum Apps`
+    - Version: `V0.1`
 
 ## How To Clone
 
@@ -36,4 +41,4 @@ This app is still under development and maintenance, and will be updated as soon
   - Json Server
   - Json Web Token
 
-Copyright &copy; 2021 ahadsenja. All Rights Reserved.
+<span style="font-size: 12px">Copyright &copy; 2021 ahadsenja. All Rights Reserved.</span>
