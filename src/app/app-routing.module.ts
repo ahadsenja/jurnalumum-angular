@@ -14,6 +14,7 @@ import { JurnalCreateComponent } from './features/jurnal/jurnal-create/jurnal-cr
 import { TransactionComponent } from './features/transaction/transaction-list/transaction.component';
 import { TransactionCreateComponent } from './features/transaction/transaction-create/transaction-create.component';
 import { TransactionUpdateComponent } from './features/transaction/transaction-update/transaction-update.component';
+import { ReportComponent } from './features/report/report.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,8 @@ const routes: Routes = [
   { path: 'transaction', component: TransactionComponent, canActivate: [AuthGuard] },
   { path: 'transaction/create', component: TransactionCreateComponent, canActivate: [AuthGuard] },
   { path: 'transaction/edit/:id', component: TransactionUpdateComponent, canActivate: [AuthGuard] },
+
+  { path: 'transaction/report', component: ReportComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
