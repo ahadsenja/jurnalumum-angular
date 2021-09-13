@@ -1,0 +1,19 @@
+.reporting {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.reporting .preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.reporting .preview h3 {
+  font-weight: 700;
+}
+
+.reporting .preview button {
+  padding: 10px 20px;
+}
