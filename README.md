@@ -41,4 +41,4 @@ This app is still under development and maintenance, and will be updated as soon
   - Json Server
   - Json Web Token
 
-<font size="1">Copyright &copy; 2021 ahadsenja. All Rights Reserved.</font>
+<font size=1>Copyright &copy; 2021 ahadsenja. All Rights Reserved.</font>
