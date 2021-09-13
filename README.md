@@ -44,18 +44,4 @@ This app is still under development and maintenance, and will be updated as soon
 <hr>
 ### Screenshots
 
-![alt-text-1](./src/assets/github_assets/Dashboard.png "title-1") ![alt-text-2](./src/assets/github_assets/Dashboard.png "title-2")
-
-<div class="screenshot">
-  <div class="row">
-    <div class="col">
-      <img src="./src/assets/github_assets/Dashboard.png">
-    </div>
-    <div class="col">
-      <img src="./src/assets/github_assets/Dashboard.png">
-    </div>
-    <div class="col">
-      <img src="./src/assets/github_assets/Dashboard.png">
-    </div>
-  </div>
-</div>
+![alt-text-1](./src/assets/github_assets/Dashboard.png "title-1") | ![alt-text-2](./src/assets/github_assets/Dashboard.png "title-2")
