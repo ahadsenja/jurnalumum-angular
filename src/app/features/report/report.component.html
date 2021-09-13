@@ -1,0 +1,43 @@
+<div class="reporting">
+  <div class="preview">
+    <div class="preview-detail">
+      <h3>Report Preview</h3>
+      <span class="text-muted">This is preview of your Data Report</span>
+    </div>
+
+    <div class="print-action">
+      <button class="btn btn-success btn-sm" (click)="createPdf()">Download PDF</button>
+    </div>
+  </div>
+
+  <div class="data-table" id="transaction-report">
+    <div class="report-header" style="background-color: grey; color: #fff; padding: 20px 20px">
+      <h3>Report Transaction on </h3>
+      <span>{{ date_now }}</span>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Debit</th>
+          <th>Credit</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let trs of transactions">
+          <td>{{trs.id}}</td>
+          <td>{{trs.date}}</td>
+          <td>{{trs.description}}</td>
+          <td>{{trs.debit | number}}</td>
+          <td>{{trs.credit | number}}</td>
+          <td>{{trs.balance | number}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
