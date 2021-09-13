@@ -44,5 +44,4 @@ This app is still under development and maintenance, and will be updated as soon
 <hr>
 ### Screenshots
 
-![alt-text-1](./src/assets/github_assets/Dashboard.png "title-1" | width=48) 
-![alt-text-2](./src/assets/github_assets/Dashboard.png "title-2" | width=48)
+![alt-text-1]<img src="./src/assets/github_assets/Dashboard.png" "title-1" width="180" height="100">
