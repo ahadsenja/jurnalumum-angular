@@ -46,7 +46,7 @@ This app is still under development and maintenance, and will be updated as soon
 
 <img src="./src/assets/github_assets/Dashboard.png" width="380" height="280"> | <img src="./src/assets/github_assets/List Jurnal.png" width="380" height="280">
 
-<img src="./src/assets/github_assets/List Transaction" width="380" height="280"> | <img src="./src/assets/github_assets/Form Add Transaction.png" width="380" height="280">
+<img src="./src/assets/github_assets/List Transaction.png" width="380" height="280"> | <img src="./src/assets/github_assets/Form Add Transaction.png" width="380" height="280">
 
 <img src="./src/assets/github_assets/Form Edit Transaction.png" width="380" height="280"> | <img src="./src/assets/github_assets/Report Preview.png" width="380" height="280">
 
