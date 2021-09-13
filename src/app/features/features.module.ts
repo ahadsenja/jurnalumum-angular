@@ -19,10 +19,11 @@ import { JurnalCreateComponent } from './jurnal/jurnal-create/jurnal-create.comp
 import { TransactionComponent } from './transaction/transaction-list/transaction.component';
 import { TransactionCreateComponent } from './transaction/transaction-create/transaction-create.component';
 import { TransactionUpdateComponent } from './transaction/transaction-update/transaction-update.component';
+import { ReportComponent } from './report/report.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, LoginComponent, RegisterComponent, JurnalComponent, TransactionComponent, JurnalCreateComponent, TransactionCreateComponent, TransactionUpdateComponent],
+  declarations: [DashboardComponent, LoginComponent, RegisterComponent, JurnalComponent, TransactionComponent, JurnalCreateComponent, TransactionCreateComponent, TransactionUpdateComponent, ReportComponent],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
