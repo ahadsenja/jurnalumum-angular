@@ -42,6 +42,7 @@ This app is still under development and maintenance, and will be updated as soon
   - Json Web Token
 
 <hr>
+
 ### Screenshots
 
 <img src="./src/assets/github_assets/Dashboard.png" width="380" height="280"> | <img src="./src/assets/github_assets/List Jurnal.png" width="380" height="280">
