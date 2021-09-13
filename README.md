@@ -41,6 +41,18 @@ This app is still under development and maintenance, and will be updated as soon
   - Json Server
   - Json Web Token
 
+<hr>
 ### Screenshots
-
-<img src="./src/assets/github_assets/Dashboard.png">
+<div class="screenshot">
+  <div class="row">
+    <div class="col">
+      <img src="./src/assets/github_assets/Dashboard.png">
+    </div>
+    <div class="col">
+      <img src="./src/assets/github_assets/Dashboard.png">
+    </div>
+    <div class="col">
+      <img src="./src/assets/github_assets/Dashboard.png">
+    </div>
+  </div>
+</div>
