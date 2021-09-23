@@ -12,7 +12,7 @@ import { TokenStorageService } from '../auth/token-storage.service';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private token: TokenStorageService) {}
+  constructor(private token: TokenStorageService) { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const authToken = this.token.getToken();
@@ -20,7 +20,7 @@ export class AuthInterceptor implements HttpInterceptor {
     if (authToken !== null) {
       const authReq = request.clone({
         headers: request.headers.set(
-          'Authorization', `Bearer ${authToken.access_token}`
+          'Authorization', `Bearer ${authToken.token}`
         )
       });
       return next.handle(authReq);

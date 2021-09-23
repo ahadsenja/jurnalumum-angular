@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private token: TokenStorageService,
     private location: Location
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     if (this.token.getToken() !== null) {
@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
       this.authService.login(email, password).subscribe(data => {
         this.isLoggedIn = true;
         this.token.saveToken(data.access_token);
-        console.log(data)
+        console.log(data);
+        console.log('Test login button');
         this.location.replaceState('/');
         window.location.reload();
       })

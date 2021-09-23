@@ -17,6 +17,6 @@ export class AuthService {
         'Content-Type': 'application/json'
       })
     }
-    return this.http.post(Api.LOGIN_URL, {email, password}, httpOptions);
+    return this.http.post(Api.LOGIN_URL, { email, password }, httpOptions);
   }
 }
